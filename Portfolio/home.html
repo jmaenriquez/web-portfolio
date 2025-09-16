@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="home.css">
+
+    <script src="https://kit.fontawesome.com/1b44c196bb.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="nav-placeholder"></div>
+
+    <div class="parent-container d-flex">
+        <div class="column1" style="margin-top: 150px; color: #191930;">
+            <div class="name">Hi, I'm JM Enriquez</div>
+
+            <div class="position">
+                <p style="margin-right: 20px; color: #191930;">SOFTWARE</p>
+                <p style="color: #5c2196;"> DEVELOPER</p>
+            </div>
+
+            <div class="summary" style="color: #98909f;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</div>
+
+            <div class="buttons" style="margin-top: 40px;">
+                <button class="projects">Projects <i class="fa-solid fa-code-compare"></i></button>
+                <button class="hire">Work with me <i class="fa-solid fa-handshake"></i></button>
+            </div>
+
+            <div class="icon-container">
+                <a href="https://www.facebook.com/kurosaaan10" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kuroosaaan" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/john-matthew-enriquez-b59634331/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="column2">
+            <img class="front_img" src="images/frontpage/JM.png" alt="">
+        </div>
+    </div>
+    
+
+    <script>
+        fetch("navigator.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("nav-placeholder").innerHTML = data;
+        });
+    </script>
+</body>
+</html>
