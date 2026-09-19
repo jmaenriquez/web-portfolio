@@ -46,11 +46,17 @@ function TopNav() {
         
         {/* Button */}
         <div className='hidden md:flex'>
-          <Button
-          name='My Button'
-          type='button'
-          onClick={() => console.log('Button Clicked')}
-          />
+          <a 
+            href=""
+            target='_blank'
+            rel=''
+          >
+              <Button
+              name='My Button'
+              type='button'
+              onClick={() => console.log('Button Clicked')}
+              />
+          </a>
         </div>
         
         {/* Burger Icon */}

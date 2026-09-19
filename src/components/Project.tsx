@@ -26,10 +26,10 @@ function Project() {
     },
 
     { 
-        img: '/projects/AquaGuard.png', 
+        img: '/projects/AccountingSystem.png', 
         title: 'Accounting System', 
         description: 'A system that tracks company finances, assets, losses, revenues, and expenses.', 
-        tools: ['C#','MudBlazor', 'PostGRE', 'GitHub'],
+        tools: ['C#', 'ASP.Net', 'MudBlazor', 'PostGRE', 'GitHub'],
         link: '',
         github: 'https://github.com/jmaenriquez/accounting-system'
     }
