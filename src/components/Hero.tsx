@@ -1,5 +1,5 @@
 import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa6'
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Download, MailOpen  } from 'lucide-react';
 import type { IconType } from 'react-icons';
 import Button from '../components/widgets/Button';
 
@@ -34,9 +34,9 @@ function Hero() {
   ]
 
   return (
-    <div id='hero' className=''>
+    <div id='hero' className='relative overflow-hidden py-16'>
         <div className='w-full h-auto flex'>
-            <div className='w-full py-2 flex flex-col-reverse items-center gap-4 md:flex-row md:justify-between md:gap-12 lg:gap-30'>
+            <div className='w-full py-4 flex flex-col-reverse items-center gap-4 md:flex-row md:justify-between md:gap-12 lg:gap-30'>
                 
                 {/* Left Panel */}
                 <div className='animate-fade-in'>
@@ -56,26 +56,48 @@ function Hero() {
 
                                     <div
                                     key={index} 
-                                    className='text-white w-10 h-10 rounded-full flex justify-center items-center border border-[#E4D9F2] hover:text-white hover:border-[#E4D9F2]'
                                     >
                                         <a href={s.href} target='_blank'>
-                                            < s.icon />
+                                            <div
+                                              className='text-white w-10 h-10 rounded-full flex justify-center items-center border border-[#E4D9F2] hover:text-white hover:border-[#E4D9F2]'
+                                            >
+                                                < s.icon />
+                                            </div>
                                         </a>
                                     </div>
                                 ))
                             }
                         </div>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-4'>
-                            <Button
-                                name = 'View Resume'
-                                type = 'button'
-                                onClick={() => console.log('Resume is clicked.')}
-                            />
-                            <Button
-                                name = 'View Resume'
-                                type = 'button'
-                                onClick={() => console.log('Resume is clicked.')}
-                            />
+
+                            <a 
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=johnmatthewenriquez1031@gmail.com&su=Let%27s%20Work%20Together%2e&body=Hi%20JM%2C%0A%0A"
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <Button
+                                    name = {
+                                        <div className='flex gap-2 justify-center items-center'>
+                                        
+                                            Contact Me <MailOpen/>
+                                        </div> 
+                                    }
+                                    type = 'button'
+                                />
+                            </a>
+                            <a 
+                              href="/Resume.pdf"
+                              download='Resume.pdf'
+                            >
+                                <Button
+                                    name = {
+                                        <div className='flex gap-2 justify-center items-center'>
+                                        <Download/> Download CV
+                                        </div> 
+                                    }
+                                    type = 'button'
+                                />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +126,7 @@ function Hero() {
                         >
                             <img
                                 src={skill} 
-                                className='rounded-lg w-16 h-16 object-contain'>
+                                className='rounded-xl w-16 h-16 object-contain'>
                             </img>
                         </div>
                     )) }

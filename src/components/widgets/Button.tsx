@@ -3,7 +3,7 @@ import React from "react";
 interface ButtonProps{
     name: React.ReactNode,
     type: 'button' | 'submit',
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 function Button({ name, type, onClick }: ButtonProps) {

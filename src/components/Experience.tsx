@@ -96,7 +96,7 @@ function Experience() {
                                                 exp.roles.map((role, index) => (
                                                     <div
                                                     key={index}
-                                                    className='text-xs md:text-sm bg-[#afa5bd] hover:bg-[#643e96] hover:cursor-default hover:text-white px-4 py-1 rounded-full flex items-center transition-all duration-200'
+                                                    className='text-xs md:text-sm text-[#241534] bg-[#afa5bd] hover:bg-[#643e96] hover:cursor-default hover:text-white px-4 py-1 rounded-full flex items-center transition-all duration-200'
                                                     >
                                                         {role}
                                                     </div>

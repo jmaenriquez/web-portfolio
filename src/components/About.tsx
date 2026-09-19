@@ -1,4 +1,4 @@
-import { CodeXml, ClockArrowUp, Users, Radical } from "lucide-react";
+import { CodeXml, ClockArrowUp, Users, Info } from "lucide-react";
 import type { IconType } from 'react-icons';
 
 interface IconTypes{
@@ -10,10 +10,10 @@ interface IconTypes{
 function About() {
 
   const cardIcons: IconTypes [] = [
-    { icon: CodeXml, title: 'Title', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { icon: ClockArrowUp, title: 'Title', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { icon: Users, title: 'Title', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { icon: Radical, title: 'Title', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+    { icon: CodeXml, title: 'Code Craftsman', text: 'Structures code for readability, easier maintenance, and smooth collaboration.' },
+    { icon: ClockArrowUp, title: 'Delivers On Time', text: 'Pushes through tough tasks with stubborn persistence and attention to detail.' },
+    { icon: Users, title: 'Team Player', text: 'Supports the team with analytical thinking and a collaborative approach.' },
+    { icon: Info, title: 'Detail-Oriented', text: 'Catches the small things that make the difference between working and working well.' },
   ]
 
   return (
@@ -27,23 +27,23 @@ function About() {
             <span className='text-md md:text-lg xl:text-xl text-[#FFD166]'>ABOUT ME</span>
 
             <div>
-              <p className='text-[#FFD166] text-2xl md:text-3xl lg:text-4xl font-semibold'>This is a motivational quote,<span className='text-white italic font-display font-normal'> to help design the page </span></p>
+              <p className='text-[#FFD166] text-2xl md:text-3xl lg:text-4xl font-semibold'>Coding is my craft,<span className='text-white italic font-display font-normal'> problem-solving is my drive. </span></p>
 
               <div className='space-y-4 text-[#afa5bd] mt-12 text-sm md:text-md lg:text-lg '>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                <p className="Greetings">
+                  Hi! I'm JM, a Junior Full Stack Developer who loves learning new things and building software that makes people's everyday life a little easier.
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                  I started coding in college with no background in it, just a curiosity and a craving for a new environment. The more problems I solved, the more I fell in love with it, eventually leading small teams through our capstone project and into an internship that turned out to be the real turning point — learning a new stack under real deadlines, and coming out the other side stronger for it.
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                  That internship led to a full-time role, further training, and a spot on an enterprise project for the company's major client. Since then, I've grown into system architecture, database design, and full-stack API integration — and I'm still climbing, aiming to take on bigger challenges as I go.
                 </p>
               </div>
 
               <div className='glass rounded-2xl p-4 glow-border mt-10'>
                 <p className='font-medium text-md italic text-[#E4D9F2] text-center text-sm md:text-md lg:text-lg'>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt."
+                  "I didn't start with a plan — I started with curiosity, and that's still what drives me."
                 </p>
               </div>
             </div>
@@ -51,12 +51,12 @@ function About() {
 
 
           {/* Right Pannel */}
-          <div className='grid lg:grid-cols-2 gap-6'>
+          <div className='grid xl:grid-cols-2 gap-6'>
             {
               cardIcons.map((ci, index) => (
               <div
                 key={index} 
-                className='glass-strong p-8 rounded-3xl animate-fade-in'
+                className='glass-strong p-8 rounded-3xl animate-fade-in border hover:cursor-default hover:border-[#E4D9F2]/50 duration-300 transition-all'
                 style={{animationDelay:`${(index + 1) * 100}ms`}}
               >
                 <span className='flex gap-4 items-center mb-4 text-sm md:text-md lg:text-lg'>

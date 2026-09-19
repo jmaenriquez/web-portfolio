@@ -36,12 +36,12 @@ function Project() {
   ]
 
   return (
-    <div className='flex flex-col gap-8' id='projects'>
+    <div className='flex flex-col gap-8 py-32 relative' id='projects'>
     
         <div className='flex flex-col items-center gap-4 relative'>
             <div
-          className='absolute top-1/2 right-1/4 w-96 h-96 bg-[#7e51d6]/8 rounded-full blur-3xl -translate-y-1/2'
-        />
+              className='absolute top-1/2 left-1/4 w-60 h-60 md:w-96 md:h-96 bg-[#7e51d6]/15 rounded-full blur-3xl -translate-y-1/2'
+            />
             <span
                 className='text-md md:text-lg xl:text-xl text-[#FFD166] animate-fade-in'
             >
@@ -49,13 +49,13 @@ function Project() {
             </span>
 
             <h1 
-              className='text-[#FFD166] text-2xl md:text-3xl lg:text-4xl font-semibold animate-fade-in animation-delay-100'
+              className='text-[#FFD166] text-2xl md:text-3xl text-center lg:text-4xl font-semibold animate-fade-in animation-delay-100'
             >
-                What I've started, 
-                <span className='text-white italic font-display font-normal'> up until now.</span>
+                Work worth showing, 
+                <span className='text-white italic font-display font-normal'> no shortcut, just steady progress.</span>
             </h1>
 
-            <p className='text-[#afa5bd] text-sm md:text-md lg:text-lg animate-fade-in animation-delay-200'>
+            <p className='text-[#afa5bd] text-sm md:text-md lg:text-lg animate-fade-in animation-delay-200 text-center'>
                 Some of my works that innovate solutions to real-world problems.
             </p>
 
@@ -84,14 +84,17 @@ function Project() {
                         />
 
                         <div className='flex gap-4 absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition-transform duration-500'>
+                            {
+                                !proj.link ? '' :
                             <a
                               href={proj.link} target='_blank'
                               className='p-2 bg-[#afa5bd]/40 hover:bg-[#4d1191] rounded-full text-white' 
-                            >
+                            >   
                                 <ArrowUpRight
                                     className='w-6 h-6'
                                 />
                             </a>
+                            }
                             <a 
                               href={proj.github} target='_blank'
                               className='p-2 bg-[#afa5bd]/40 hover:bg-[#4d1191] rounded-full text-white'
@@ -108,7 +111,7 @@ function Project() {
                             <h1
                               className='text-lg lg:text-2xl font-medium text-white flex justify-between group-hover:text-[#b893e9] group-hover:translate-x-1 group-hover:translate-y-1 transition-all'
                             >
-                                {proj.title} <a href={proj.link}><ArrowUpRight  className='w-6 h-6 hover:cursor-pointer'/></a>
+                                {proj.title} <a href={!proj.link ? proj.github : proj.link} target='_blank'><ArrowUpRight  className='w-6 h-6 hover:cursor-pointer'/></a>
                             
                             </h1>
                             <p

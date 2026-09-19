@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { Menu} from 'lucide-react';
 import React from 'react';
 import Button from './widgets/Button';
@@ -36,7 +35,7 @@ function TopNav() {
                 <a
                 key={link.label} 
                 href={link.href}
-                className='p-0 text-[#c9c9c9]  hover:text-white'
+                className='p-0 text-[#c9c9c9] hover:text-white'
                 >
                   {link.label}
                 </a>
@@ -47,14 +46,13 @@ function TopNav() {
         {/* Button */}
         <div className='hidden md:flex'>
           <a 
-            href=""
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=johnmatthewenriquez1031@gmail.com&su=Let%27s%20Work%20Together%2e&body=Hi%20JM%2C%0A%0A"
             target='_blank'
-            rel=''
+            rel='noopener noreferrer'
           >
               <Button
-              name='My Button'
+              name='Contact Me'
               type='button'
-              onClick={() => console.log('Button Clicked')}
               />
           </a>
         </div>
