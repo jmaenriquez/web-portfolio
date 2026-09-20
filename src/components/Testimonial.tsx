@@ -11,26 +11,26 @@ function Testimonial() {
 
   const testimony: Testimonies [] = [
     { 
-        author: 'John Doe', 
-        role: 'CEO, Fintech Inc.', 
+        author: 'Cris Norman Olipas', 
+        role: 'OSOAD Director, CICT | NEUST', 
         comments: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quaerat vero quae, est voluptatem architecto qui animi vel magni necessitatibus totam repellat eos, autem minima modi! A debitis non atque?'
     },
 
     { 
-        author: 'Vicky Conroy', 
-        role: 'Sr. Full Stack Dev,  Likha-IT Inc.', 
+        author: 'John Renz Del Mundo', 
+        role: 'Team Lead, Metaverse Holdings Corp.', 
         comments: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quaerat vero quae, est voluptatem architecto qui animi vel magni necessitatibus totam repellat eos, autem minima modi! A debitis non atque?'
     },
 
     { 
-        author: 'Manny Pacqaio', 
-        role: 'Heavy Weight Boxing Champ.', 
+        author: 'Olsen Daim Valente', 
+        role: 'Jr. Full Stack Dev, Metaverse Holdings Corp.', 
         comments: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quaerat vero quae, est voluptatem architecto qui animi vel magni necessitatibus totam repellat eos, autem minima modi! A debitis non atque?'
     },
 
     { 
-        author: "Walter O'Brien", 
-        role: 'Team Lead, Scorpions', 
+        author: "Kurt Reyes", 
+        role: 'Client, OLFU N.E. Student', 
         comments: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quaerat vero quae, est voluptatem architecto qui animi vel magni necessitatibus totam repellat eos, autem minima modi! A debitis non atque?'
     }
   ]
