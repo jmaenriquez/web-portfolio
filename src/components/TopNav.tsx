@@ -86,11 +86,16 @@ function TopNav() {
             }
 
             <div className='md:hidden w-full'>
-              <Button
-              name='My Button'
-              type='button'
-              onClick={() => console.log('Button Clicked')}
-              />
+              <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=johnmatthewenriquez1031@gmail.com&su=Let%27s%20Work%20Together%2e&body=Hi%20JM%2C%0A%0A"
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                  <Button
+                  name='Contact Me'
+                  type='button'
+                  />
+              </a>
             </div>
         </div>
         
