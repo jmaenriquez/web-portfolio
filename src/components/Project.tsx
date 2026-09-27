@@ -1,7 +1,7 @@
 import { ArrowUpRight} from 'lucide-react'
 import { FaGithub } from 'react-icons/fa6'
 import Button from './widgets/Button'
-
+import { useInView } from '../hooks/useInView'
 
 interface ProjectsProp{
     img: string,
@@ -12,8 +12,9 @@ interface ProjectsProp{
     github: string
 }
 
-// [#E4D9F2]
 function Project() {
+
+  const { ref, isInView } = useInView();
 
   const projects: ProjectsProp [] = [
     {
@@ -24,7 +25,6 @@ function Project() {
         link: '',
         github: 'https://github.com/jmaenriquez/capstone-proj'
     },
-
     { 
         img: '/projects/AccountingSystem.png', 
         title: 'Accounting System', 
@@ -36,26 +36,26 @@ function Project() {
   ]
 
   return (
-    <div className='flex flex-col gap-8 py-32 relative' id='projects'>
+    <div ref={ref} className='flex flex-col gap-8 py-32 relative' id='projects'>
     
         <div className='flex flex-col items-center gap-4 relative'>
             <div
               className='absolute top-1/2 left-1/4 w-60 h-60 md:w-96 md:h-96 bg-[#7e51d6]/15 rounded-full blur-3xl -translate-y-1/2'
             />
             <span
-                className='text-md md:text-lg xl:text-xl text-[#FFD166] animate-fade-in'
+                className={`text-md md:text-lg xl:text-xl text-[#FFD166] ${isInView ? 'animate-fade-in' : 'opacity-0'}`}
             >
                 FEATURED WORK
             </span>
 
             <h1 
-              className='text-[#FFD166] text-2xl md:text-3xl text-center lg:text-4xl font-semibold animate-fade-in animation-delay-100'
+              className={`text-[#FFD166] text-2xl md:text-3xl text-center lg:text-4xl font-semibold ${isInView ? 'animate-fade-in animation-delay-100' : 'opacity-0'}`}
             >
                 Work worth showing, 
                 <span className='text-white italic font-display font-normal'> no shortcut, just steady progress.</span>
             </h1>
 
-            <p className='text-[#afa5bd] text-sm md:text-md lg:text-lg animate-fade-in animation-delay-200 text-center'>
+            <p className={`text-[#afa5bd] text-sm md:text-md lg:text-lg text-center ${isInView ? 'animate-fade-in animation-delay-200' : 'opacity-0'}`}>
                 Some of my works that innovate solutions to real-world problems.
             </p>
 
@@ -66,11 +66,10 @@ function Project() {
             {
                 projects.map((proj, index) => (
                 
-                //Cards
                 <div
                   key={index}
-                  className='group rounded-xl glass overflow-hidden flex flex-col gap-2 animate-fade-in md:row-span-1'
-                  style={{animationDelay: `${(index + 3) * 100}ms`}}
+                  className={`group rounded-xl glass overflow-hidden flex flex-col gap-2 md:row-span-1 ${isInView ? 'animate-fade-in' : 'opacity-0'}`}
+                  style={{ animationDelay: isInView ? `${(index + 3) * 100}ms` : undefined }}
                 >
                     <div className='relative overflow-hidden aspect-video '>
                         <img 
@@ -86,8 +85,8 @@ function Project() {
                         <div className='flex gap-4 absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition-transform duration-500'>
                             {
                                 !proj.link ? '' :
-                            <a
-                              href={proj.link} target='_blank'
+                            
+                            <a href={proj.link} target='_blank'
                               className='p-2 bg-[#afa5bd]/40 hover:bg-[#4d1191] rounded-full text-white' 
                             >   
                                 <ArrowUpRight

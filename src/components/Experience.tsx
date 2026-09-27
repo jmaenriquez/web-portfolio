@@ -1,3 +1,5 @@
+import { useInView } from '../hooks/useInView'
+
 interface Experiences{
     title: string,
     duration: string,
@@ -7,6 +9,8 @@ interface Experiences{
 }
 
 function Experience() {
+
+  const { ref, isInView } = useInView();
 
   const experience: Experiences [] = [
     { 
@@ -28,6 +32,7 @@ function Experience() {
   return (
     <div 
       id='experience'
+      ref={ref}
       className='relative py-32'
     >
         <div
@@ -36,10 +41,10 @@ function Experience() {
 
         <div className='flex flex-col gap-8'>
             <div className='flex flex-col gap-4'>
-                <p className='text-md md:text-lg xl:text-xl text-[#FFD166]'>JOURNEY</p>
-                <h1 className='text-[#FFD166] text-2xl md:text-3xl lg:text-4xl font-semibold'>Experience gained<span className='text-white italic font-display font-normal'> through discipline and perseverance</span></h1>
+                <p className={`text-md md:text-lg xl:text-xl text-[#FFD166] ${isInView ? 'animate-fade-in' : 'opacity-0'}`}>JOURNEY</p>
+                <h1 className={`text-[#FFD166] text-2xl md:text-3xl lg:text-4xl font-semibold ${isInView ? 'animate-fade-in animation-delay-100' : 'opacity-0'}`}>Experience gained<span className='text-white italic font-display font-normal'> through discipline and perseverance</span></h1>
 
-                <p className='text-[#afa5bd] text-sm animate-fade-in animation-delay-200'> A timeline of my professional growth, from a curious aspiring student to a junior full stack developer contributing to enterprise level projects. </p>
+                <p className={`text-[#afa5bd] text-sm ${isInView ? 'animate-fade-in animation-delay-200' : 'opacity-0'}`}> A timeline of my professional growth, from a curious aspiring student to a junior full stack developer contributing to enterprise level projects. </p>
             </div>
 
             <div className='relative'>
@@ -53,8 +58,8 @@ function Experience() {
 
                             <div 
                               key={index}
-                              className='relative grid lg:grid-cols-2 gap-8 animate-fade-in'
-                              style={{animationDelay: `${(index + 1) * 150}ms`}}
+                              className={`relative grid lg:grid-cols-2 gap-8 ${isInView ? 'animate-fade-in' : 'opacity-0'}`}
+                              style={{ animationDelay: isInView ? `${(index + 1) * 150}ms` : undefined }}
                             >
                                 {/* Timeline Dots */}
                                 <div className='absolute left-0 lg:left-1/2 w-3 h-3 rounded-full bg-[#FFD166] -translate-x-1/2 ring-4 ring-[#281c3a] z-10'></div>

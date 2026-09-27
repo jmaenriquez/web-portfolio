@@ -1,5 +1,6 @@
 import { CodeXml, ClockArrowUp, Users, Info } from "lucide-react";
 import type { IconType } from 'react-icons';
+import { useInView } from "../hooks/useInView";
 
 interface IconTypes{
   icon: IconType,
@@ -9,6 +10,8 @@ interface IconTypes{
 
 function About() {
 
+  const { ref, isInView } = useInView();
+
   const cardIcons: IconTypes [] = [
     { icon: CodeXml, title: 'Code Craftsman', text: 'Structures code for readability, easier maintenance, and smooth collaboration.' },
     { icon: ClockArrowUp, title: 'Delivers On Time', text: 'Pushes through tough tasks with stubborn persistence and attention to detail.' },
@@ -17,10 +20,10 @@ function About() {
   ]
 
   return (
-    <div id="about" className="relative py-32">
+    <div id="about" ref={ref} className="relative py-32">
         <div className='relative w-full py-2 grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16 2xl:gap-30'>
           {/* Left Pannel */}
-          <div className=' flex flex-col gap-4 animate-fade-in animation-delay-200'>
+          <div className={`flex flex-col gap-4 ${isInView ? 'animate-fade-in animation-delay-200' : 'opacity-0'}`}>
             <div
               className='absolute top-1/2 left-1/4 w-60 h-60 md:w-96 md:h-96 bg-[#7e51d6]/15 rounded-full blur-3xl -translate-y-1/2'
             />
@@ -56,8 +59,10 @@ function About() {
               cardIcons.map((ci, index) => (
               <div
                 key={index} 
-                className='glass-strong p-8 rounded-3xl animate-fade-in border hover:cursor-default hover:border-[#E4D9F2]/50 duration-300 transition-all'
-                style={{animationDelay:`${(index + 1) * 100}ms`}}
+                className={`glass-strong p-8 rounded-3xl border hover:cursor-default hover:border-[#E4D9F2]/50 duration-300 transition-all ${
+                  isInView ? 'animate-fade-in' : 'opacity-0'
+                }`}
+                style={{ animationDelay: isInView ? `${(index + 1) * 100}ms` : undefined }}
               >
                 <span className='flex gap-4 items-center mb-4 text-sm md:text-md lg:text-lg'>
                   <div className='bg-[#afa5bd] p-2 rounded-lg md:rounded-xl text-[#241534]'>

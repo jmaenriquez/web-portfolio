@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Hero from './components/Hero';
 import Nav from './components/TopNav';
 import About from './components/About';
@@ -7,6 +9,14 @@ import Testimonial from './components/Testimonial';
 import { Footer } from './components/Footer';
 
 function Dashboard() {
+
+  React.useEffect(() => {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+}, []);
+
   return (
     <div className='relative min-h-screen overflow-x-hidden bg-[#281c3a] flex flex-col gap-8'>
 
