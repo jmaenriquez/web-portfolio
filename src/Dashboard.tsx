@@ -8,7 +8,7 @@ import { Footer } from './components/Footer';
 
 function Dashboard() {
   return (
-    <div className='relative w-full min-h-screen overflow-x-hidden bg-[#281c3a] flex flex-col gap-8'>
+    <div className='relative min-h-screen overflow-x-hidden bg-[#281c3a] flex flex-col gap-8'>
 
       <div className='py-16 px-20 lg:px-25 xl:px-30 2xl:px-50'>
         {/* Floating Pixels */}

@@ -20,7 +20,7 @@ function Project() {
         img: '/projects/AquaGuard.png', 
         title: 'AquaGuard Web Monitor', 
         description: 'A Capstone project that monitors water level for a town near the river.', 
-        tools: ['PHP','JS', 'MaraDB', 'IoT'],
+        tools: ['PHP','JS', 'MariaDB', 'IoT'],
         link: '',
         github: 'https://github.com/jmaenriquez/capstone-proj'
     },

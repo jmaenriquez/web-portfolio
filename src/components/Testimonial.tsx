@@ -10,28 +10,23 @@ interface Testimonies{
 function Testimonial() {
 
   const testimony: Testimonies [] = [
-    { 
-        author: 'Cris Norman Olipas', 
-        role: 'OSOAD Director, CICT | NEUST', 
-        comments: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quaerat vero quae, est voluptatem architecto qui animi vel magni necessitatibus totam repellat eos, autem minima modi! A debitis non atque?'
-    },
 
     { 
         author: 'John Renz Del Mundo', 
-        role: 'Team Lead, Metaverse Holdings Corp.', 
-        comments: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quaerat vero quae, est voluptatem architecto qui animi vel magni necessitatibus totam repellat eos, autem minima modi! A debitis non atque?'
+        role: 'Former Team Lead, Metaverse Holdings Corp.', 
+        comments: 'Great job to JM. He showed great initiative, was very active throughout, and accepted every task with openness. His willingness to learn is highly appreciated. Keep up the good work!'
     },
 
     { 
         author: 'Olsen Daim Valente', 
-        role: 'Jr. Full Stack Dev, Metaverse Holdings Corp.', 
-        comments: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quaerat vero quae, est voluptatem architecto qui animi vel magni necessitatibus totam repellat eos, autem minima modi! A debitis non atque?'
+        role: 'AI Quality Mngr, Mercor (Former Jr. Dev, Metaverse Holdings Corp.)', 
+        comments: "JM was honestly one of the most hardworking guys I ever worked with. He was 100% focused on his tasks and didn't waste any time. He always made his work the top priority before anything else and got things done no matter what. On top of that, he is a huge team player. He always had everyone's back, helped out whenever anyone needed it, and brought out the best in the team. He has so many great strengths, and all of that easily makes him such a good leader."
     },
 
     { 
         author: "Kurt Reyes", 
-        role: 'Client, OLFU N.E. Student', 
-        comments: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quaerat vero quae, est voluptatem architecto qui animi vel magni necessitatibus totam repellat eos, autem minima modi! A debitis non atque?'
+        role: 'CEO, Kurt Reyes 3D Printing Services', 
+        comments: "JM did an excellent job in developing our chatbot. He was very fast, responsive, and approachable throughout the entire project. He was always willing to accommodate our requests, answer our questions, and make adjustments whenever needed. Communication with him was smooth and easy, which made the development process much more convenient for us. The final chatbot successfully met the objectives of our project, and we really appreciate his efforts, technical skills, and dedication in making it happen."
     }
   ]
 
