@@ -20,7 +20,7 @@ function Dashboard() {
   return (
     <div className='relative min-h-screen overflow-x-hidden bg-[#281c3a] flex flex-col gap-8'>
 
-      <div className='py-16 px-20 lg:px-25 xl:px-30 2xl:px-50'>
+      <div className='py-16 px-6 lg:px-25 xl:px-30 2xl:px-50'>
         {/* Floating Pixels */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none z-0'>
           {[...Array(50)].map((_, index) => (

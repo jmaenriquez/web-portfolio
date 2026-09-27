@@ -17,14 +17,14 @@ function Experience() {
         title: 'Jr. Full Stack Developer', 
         duration: '2025 - 2026',
         company: 'Metaverse Holdings Corp. (Sagesoft Cloud Inc.)',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+        description: 'Contributed as a Junior Full Stack Developer to a large-scale project for the Supreme Court of the Philippines under Sagesoft Solutions Inc. Improved system functionality through bug fixes, code enhancements, maintenance, and new feature development.',
         roles: ['Full Stack', 'Junior']
     },
     { 
         title: 'Web Dev Intern', 
         duration: 'Jan - Apr 2025',
         company: 'Metaverse Holdings Corp.',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+        description: 'Led a small development team in building a full-stack web application, managing frontend and backend development, database design, and version control.',
         roles: ['Lead', 'Project Mngr', 'Ver Ctrl Mngr', 'DB Mngr', 'Full Stack']
     },
 ]
