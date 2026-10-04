@@ -28,9 +28,11 @@ function Hero() {
     '/skills/outsystems.png',
     '/skills/Postgresql.webp',
     '/skills/mariadb.png',
+    '/skills/supabase.png',
     '/skills/Figma.webp',
     '/skills/Github.png',
     '/skills/ClaudeAI.webp',
+    '/skills/vercel.png',
   ]
 
   return (
