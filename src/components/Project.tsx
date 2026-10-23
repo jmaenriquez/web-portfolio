@@ -149,10 +149,11 @@ function Project() {
             name="View all Projects"
             type="button"
             onClick={() =>
+              {console.log("View Project Clicked")
               window.open(
                 "https://github.com/jmaenriquez?tab=repositories",
                 "_blank",
-              )
+              )}
             }
           />
         </div>
