@@ -1,153 +1,164 @@
-import { ArrowUpRight} from 'lucide-react'
-import { FaGithub } from 'react-icons/fa6'
-import Button from './widgets/Button'
-import { useInView } from '../hooks/useInView'
+import { ArrowUpRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa6";
+import Button from "./widgets/Button";
+import { useInView } from "../hooks/useInView";
 
-interface ProjectsProp{
-    img: string,
-    title: string,
-    description: string,
-    tools: string[],
-    link: string,
-    github: string
+interface ProjectsProp {
+  img: string;
+  title: string;
+  description: string;
+  tools: string[];
+  link: string;
+  github: string;
 }
 
 function Project() {
-
   const { ref, isInView } = useInView();
 
-  const projects: ProjectsProp [] = [
+  const projects: ProjectsProp[] = [
     {
-        img: '/projects/AquaGuard.png', 
-        title: 'AquaGuard Web Monitor', 
-        description: 'A Capstone project that monitors water level for a town near the river.', 
-        tools: ['PHP','JS', 'MariaDB', 'IoT'],
-        link: '',
-        github: 'https://github.com/jmaenriquez/capstone-proj'
+      img: "/projects/PizzaPalace.png",
+      title: "Pizza Palace",
+      description:
+        "An E-commerce project built for small businesses that sells food products.",
+      tools: ["TS", "React.js", "Node.js", "TailwindCSS", "Supabase", "GitHub", "Claude", "Vercel", "Render"],
+      link: "https://pizza-palace-henna.vercel.app/",
+      github: "https://github.com/jmaenriquez/pizza-palace",
     },
-    { 
-        img: '/projects/AccountingSystem.png', 
-        title: 'Accounting System', 
-        description: 'A system that tracks company finances, assets, losses, revenues, and expenses.', 
-        tools: ['C#', 'ASP.Net', 'MudBlazor', 'PostGRE', 'GitHub'],
-        link: '',
-        github: 'https://github.com/jmaenriquez/accounting-system'
-    }
-  ]
+    {
+      img: "/projects/AccountingSystem.png",
+      title: "Accounting System",
+      description:
+        "A system that tracks company finances, assets, losses, revenues, and expenses.",
+      tools: ["C#", "ASP.Net", "MudBlazor", "PostGRE", "GitHub"],
+      link: "",
+      github: "https://github.com/jmaenriquez/accounting-system",
+    },
+    {
+      img: "/projects/AquaGuard.png",
+      title: "AquaGuard Web Monitor",
+      description:
+        "A Capstone project that monitors water level for a town near the river.",
+      tools: ["PHP", "JS", "MariaDB", "IoT"],
+      link: "",
+      github: "https://github.com/jmaenriquez/capstone-proj",
+    },
+  ];
 
   return (
-    <div ref={ref} className='flex flex-col gap-8 py-32 relative' id='projects'>
-    
-        <div className='flex flex-col items-center gap-4 relative'>
-            <div
-              className='absolute top-1/2 left-1/4 w-60 h-60 md:w-96 md:h-96 bg-[#7e51d6]/15 rounded-full blur-3xl -translate-y-1/2'
-            />
-            <span
-                className={`text-md md:text-lg xl:text-xl text-[#FFD166] ${isInView ? 'animate-fade-in' : 'opacity-0'}`}
-            >
-                FEATURED WORK
-            </span>
+    <div ref={ref} className="flex flex-col gap-8 py-32 relative" id="projects">
+      <div className="flex flex-col items-center gap-4 relative">
+        <div className="absolute top-1/2 left-1/4 w-60 h-60 md:w-96 md:h-96 bg-[#7e51d6]/15 rounded-full blur-3xl -translate-y-1/2" />
+        <span
+          className={`text-md md:text-lg xl:text-xl text-[#FFD166] ${isInView ? "animate-fade-in" : "opacity-0"}`}
+        >
+          FEATURED WORK
+        </span>
 
-            <h1 
-              className={`text-[#FFD166] text-2xl md:text-3xl text-center lg:text-4xl font-semibold ${isInView ? 'animate-fade-in animation-delay-100' : 'opacity-0'}`}
-            >
-                Work worth showing, 
-                <span className='text-white italic font-display font-normal'> no shortcut, just steady progress.</span>
-            </h1>
+        <h1
+          className={`text-[#FFD166] text-2xl md:text-3xl text-center lg:text-4xl font-semibold ${isInView ? "animate-fade-in animation-delay-100" : "opacity-0"}`}
+        >
+          Work worth showing,
+          <span className="text-white italic font-display font-normal">
+            {" "}
+            no shortcut, just steady progress.
+          </span>
+        </h1>
 
-            <p className={`text-[#afa5bd] text-sm md:text-md lg:text-lg text-center ${isInView ? 'animate-fade-in animation-delay-200' : 'opacity-0'}`}>
-                Some of my works that innovate solutions to real-world problems.
-            </p>
+        <p
+          className={`text-[#afa5bd] text-sm md:text-md lg:text-lg text-center ${isInView ? "animate-fade-in animation-delay-200" : "opacity-0"}`}
+        >
+          Some of my works that innovate solutions to real-world problems.
+        </p>
+      </div>
 
-        </div>
+      {/* Card Container */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {projects.map((proj, index) => (
+          <div
+            key={index}
+            className={`group rounded-xl glass overflow-hidden flex flex-col gap-2 md:row-span-1 ${isInView ? "animate-fade-in" : "opacity-0"}`}
+            style={{
+              animationDelay: isInView ? `${(index + 3) * 100}ms` : undefined,
+            }}
+          >
+            <div className="relative overflow-hidden aspect-video ">
+              <img
+                src={proj.img}
+                alt={proj.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
 
-        {/* Card Container */}
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            {
-                projects.map((proj, index) => (
-                
-                <div
-                  key={index}
-                  className={`group rounded-xl glass overflow-hidden flex flex-col gap-2 md:row-span-1 ${isInView ? 'animate-fade-in' : 'opacity-0'}`}
-                  style={{ animationDelay: isInView ? `${(index + 3) * 100}ms` : undefined }}
+              <div className="absolute inset-0 bg-linear-to-t from-[#34204A] via-[#34204A]/50 to-transparent opacity-70" />
+
+              <div className="flex gap-4 absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition-transform duration-500">
+                {!proj.link ? (
+                  ""
+                ) : (
+                  <a
+                    href={proj.link}
+                    target="_blank"
+                    className="p-2 bg-[#afa5bd]/40 hover:bg-[#4d1191] rounded-full text-white"
+                  >
+                    <ArrowUpRight className="w-6 h-6" />
+                  </a>
+                )}
+                <a
+                  href={proj.github}
+                  target="_blank"
+                  className="p-2 bg-[#afa5bd]/40 hover:bg-[#4d1191] rounded-full text-white"
                 >
-                    <div className='relative overflow-hidden aspect-video '>
-                        <img 
-                          src={proj.img} 
-                          alt={proj.title}
-                          className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110' 
-                        />
-
-                        <div
-                          className='absolute inset-0 bg-linear-to-t from-[#34204A] via-[#34204A]/50 to-transparent opacity-70'
-                        />
-
-                        <div className='flex gap-4 absolute inset-0 items-center justify-center opacity-0 group-hover:opacity-100 transition-transform duration-500'>
-                            {
-                                !proj.link ? '' :
-                            
-                            <a href={proj.link} target='_blank'
-                              className='p-2 bg-[#afa5bd]/40 hover:bg-[#4d1191] rounded-full text-white' 
-                            >   
-                                <ArrowUpRight
-                                    className='w-6 h-6'
-                                />
-                            </a>
-                            }
-                            <a 
-                              href={proj.github} target='_blank'
-                              className='p-2 bg-[#afa5bd]/40 hover:bg-[#4d1191] rounded-full text-white'
-                            >
-                                <FaGithub
-                                    className='w-6 h-6'
-                                />
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div className='px-4 py-2 flex flex-col gap-4'>
-                        <div className='flex flex-col gap-2'>
-                            <h1
-                              className='text-lg lg:text-2xl font-medium text-white flex justify-between group-hover:text-[#b893e9] group-hover:translate-x-1 group-hover:translate-y-1 transition-all'
-                            >
-                                {proj.title} <a href={!proj.link ? proj.github : proj.link} target='_blank'><ArrowUpRight  className='w-6 h-6 hover:cursor-pointer'/></a>
-                            
-                            </h1>
-                            <p
-                              className='text-[#afa5bd] text-sm lg:text-lg' 
-                            >{proj.description}</p>
-                        </div>
-                    </div>
-                    <div className='flex flex-wrap gap-2 px-4 py-4'>
-                        {
-                            [...proj.tools].map((tool, index)=> (
-
-                                <p 
-                                  key={index}
-                                  className='px-4 py-1 bg-[#afa5bd] hover:bg-[#643e96] hover:cursor-default hover:text-white rounded-full text-[#241534] text-xs sm:text-sm transition-all duration-200'
-                                >
-                                    {tool}
-                                </p>
-                            ))
-                        }
-                    </div>
-                </div>
-                ))
-            }
-        </div>
-
-        <div className='flex justify-center'>
-
-            <div className='w-120'>
-                <Button 
-                    name = 'View all Projects'
-                    type='button'
-                    onClick={() => window.open('https://github.com/jmaenriquez?tab=repositories', '_blank')}
-                />
+                  <FaGithub className="w-6 h-6" />
+                </a>
+              </div>
             </div>
+
+            <div className="px-4 py-2 flex flex-col gap-4">
+              <div className="flex flex-col gap-2">
+                <h1 className="text-lg lg:text-2xl font-medium text-white flex justify-between group-hover:text-[#b893e9] group-hover:translate-x-1 group-hover:translate-y-1 transition-all">
+                  {proj.title}{" "}
+                  <a
+                    href={!proj.link ? proj.github : proj.link}
+                    target="_blank"
+                  >
+                    <ArrowUpRight className="w-6 h-6 hover:cursor-pointer" />
+                  </a>
+                </h1>
+                <p className="text-[#afa5bd] text-sm lg:text-lg">
+                  {proj.description}
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2 px-4 py-4">
+              {[...proj.tools].map((tool, index) => (
+                <p
+                  key={index}
+                  className="px-4 py-1 bg-[#afa5bd] hover:bg-[#643e96] hover:cursor-default hover:text-white rounded-full text-[#241534] text-xs sm:text-sm transition-all duration-200"
+                >
+                  {tool}
+                </p>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-center">
+        <div className="w-120">
+          <Button
+            name="View all Projects"
+            type="button"
+            onClick={() =>
+              window.open(
+                "https://github.com/jmaenriquez?tab=repositories",
+                "_blank",
+              )
+            }
+          />
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Project
+export default Project;
