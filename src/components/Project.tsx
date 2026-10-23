@@ -20,7 +20,7 @@ function Project() {
       img: "/projects/PizzaPalace.png",
       title: "Pizza Palace",
       description:
-        "An E-commerce project built for small businesses that sells food products.",
+        "An E-commerce project built for small businesses that sells food products. For usage, use these creds: (usertestacc@domain.com, 12345678)",
       tools: ["TS", "React.js", "Node.js", "TailwindCSS", "Supabase", "GitHub", "Claude", "Vercel", "Render"],
       link: "https://pizza-palace-henna.vercel.app/",
       github: "https://github.com/jmaenriquez/pizza-palace",
